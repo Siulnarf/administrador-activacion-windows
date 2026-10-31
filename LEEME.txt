@@ -1,0 +1,27 @@
+Administrador de activación de Windows
+
+USO
+1. Puedes compartir Activacion-Windows.bat por sí solo.
+2. Ábrelo para consultar detalles y vencimiento.
+3. Para cambiar la clave, configurar KMS o activar: clic derecho > Ejecutar como administrador.
+4. Elige una opción y revisa el resultado de Windows. Cada cambio pide confirmación.
+
+No instala programas adicionales. Utiliza CMD, Windows PowerShell y slmgr.vbs incluidos en Windows. No ejecuta acciones de activación al abrirse y no guarda claves en archivos de registro.
+
+LICENCIA Y EDICIONES
+Debes contar con una licencia válida o autorización de tu organización para utilizar su KMS. El programa no incluye claves ni servidores públicos. Windows Home no admite KMS; la aplicación bloquea la configuración de KMS en las ediciones identificadas como Core. La validación final de la clave corresponde a Windows. La clave debe coincidir con la edición instalada; Pro y Pro for Workstations son diferentes.
+
+CONECTIVIDAD Y PROTECCIONES
+No cambia el firewall, Defender, SmartScreen ni la política de ejecución de PowerShell. No garantiza ausencia de bloqueos: una organización puede restringir BAT, PowerShell o conexiones externas. KMS normalmente requiere conectividad TCP al puerto 1688 del servidor autorizado, o al puerto que indique tu administrador, y puede necesitar la VPN de tu organización. Si aparece un bloqueo, consulta al administrador; no desactives las protecciones.
+
+Un BAT o ZIP puede ser bloqueado por correo o marcado como procedente de Internet. Usa un canal de distribución permitido. Convertirlo a EXE no garantiza que desaparezcan esos avisos.
+
+LIMITACIONES
+Instalar una clave reemplaza la instalada. Conserva previamente tu clave y datos de licencia. Quitar el servidor manual solo restaura la detección automática de KMS; no restaura la clave anterior ni garantiza reactivación. El programa muestra la salida original de Windows y no supone que una operación haya tenido éxito.
+
+VERIFICACIÓN
+Se verificó la sintaxis de los bloques de PowerShell y las etiquetas del menú. No se ejecutaron cambios de licencia, activación ni configuración KMS en el equipo durante la creación del archivo. Pendiente probar el flujo completo en una máquina de prueba con licencia y servidor autorizados.
+
+Documentación:
+https://learn.microsoft.com/en-us/windows-server/get-started/activation-slmgr-vbs-options
+https://learn.microsoft.com/en-us/windows-server/get-started/kms-client-activation-keys
